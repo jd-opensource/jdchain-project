@@ -18,9 +18,9 @@
 
 	<properties>
 
-		<bft-smart.version>0.3.0.RELEASE</bft-smart.version>
+		
 		<bouncycastle.version>1.61</bouncycastle.version>
-		<bft-smart.version>1.61</bft-smart.version>
+		
 		<commons-io.version>2.4</commons-io.version>
 		<mongo.driver.version>3.3.0</mongo.driver.version>
 		<shiro.version>1.2.2</shiro.version>
