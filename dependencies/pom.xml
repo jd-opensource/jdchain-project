@@ -383,7 +383,7 @@
 								<goal>jar</goal>
 							</goals>
 							<configuration>
-								<additionalparam>${javadoc.opts}</additionalparam>
+								<additionalparam>-Xdoclint:none</additionalparam>
 							</configuration>
 						</execution>
 					</executions>
