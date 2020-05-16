@@ -11,7 +11,7 @@
 
 	<groupId>com.jd.blockchain</groupId>
 	<artifactId>jdchain-dependencies</artifactId>
-	<version>1.1.2.RELEASE</version>
+	<version>1.1.4.RELEASE</version>
 	<packaging>pom</packaging>
 	<description>jdchain-dependencies</description>
 
@@ -25,7 +25,7 @@
 		<mongo.driver.version>3.3.0</mongo.driver.version>
 		<shiro.version>1.2.2</shiro.version>
 		<aspectj.version>1.8.8</aspectj.version>
-		<fastjson.version>1.2.60</fastjson.version>
+		<fastjson.version>1.2.67</fastjson.version>
 		<!-- <asm.version>5.2</asm.version> -->
 		<procyon.version>0.5.35</procyon.version>
 		<druid.version>1.0.18</druid.version>
@@ -383,7 +383,7 @@
 								<goal>jar</goal>
 							</goals>
 							<configuration>
-								<additionalparam>${javadoc.opts}</additionalparam>
+								<additionalparam>-Xdoclint:none</additionalparam>
 							</configuration>
 						</execution>
 					</executions>
@@ -408,5 +408,80 @@
 		</pluginManagement>
 
 	</build>
+
+	<profiles>
+		<!-- mvn repository;-->
+		<profile>
+			<id>oss-release</id>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>1.6.8</version>
+						<extensions>true</extensions>
+						<configuration>
+							<serverId>oss-rr</serverId>
+							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+							<autoReleaseAfterClose>false</autoReleaseAfterClose>
+						</configuration>
+					</plugin>
+
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<version>2.2.1</version>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<version>2.10.4</version>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+								<configuration>
+									<additionalparam>-Xdoclint:none</additionalparam>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<version>1.5</version>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+
+	<distributionManagement>
+		<repository>
+			<id>oss-rr</id>
+			<name>Nexus Release Repository</name>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 
 </project>
