@@ -19,7 +19,7 @@
 	<properties>
 
 		
-		<bouncycastle.version>1.61</bouncycastle.version>
+		<bouncycastle.version>1.69</bouncycastle.version>
 		
 		<commons-io.version>2.4</commons-io.version>
 		<mongo.driver.version>3.3.0</mongo.driver.version>
@@ -255,7 +255,7 @@
 			<dependency>
 				<groupId>org.bouncycastle</groupId>
 				<artifactId>bcprov-jdk15on</artifactId>
-				<version>1.61</version>
+				<version>1.69</version>
 			</dependency>
 
 			<dependency>
