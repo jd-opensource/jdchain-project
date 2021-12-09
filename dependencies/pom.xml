@@ -50,7 +50,8 @@
 		<disruptor.version>3.3.6</disruptor.version>
 		<kryo.version>3.0.1</kryo.version>
 		<jedis.version>2.9.0</jedis.version>
-		<rocksdb.version>6.3.6</rocksdb.version>
+<!--		<rocksdb.version>6.3.6</rocksdb.version>-->
+		<rocksdb.version>6.22.1.1</rocksdb.version>
 		<zookeeper.version>3.4.6</zookeeper.version>
 		<javaparser.version>3.5.12</javaparser.version>
 		<ehcache.version>3.5.3</ehcache.version>
