@@ -11,7 +11,7 @@
 
 	<groupId>com.jd.blockchain</groupId>
 	<artifactId>jdchain-dependencies</artifactId>
-	<version>1.1.6.RELEASE</version>
+	<version>1.1.7.RELEASE</version>
 	<packaging>pom</packaging>
 	<description>jdchain-dependencies</description>
 
