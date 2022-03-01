@@ -57,6 +57,8 @@
 		<cache-api.version>1.1.0</cache-api.version>
 		<commons-io.version>2.4</commons-io.version>
 		<disruptor.version>3.4.2</disruptor.version>
+
+		<graalvm.version>22.0.0.2</graalvm.version>
 	</properties>
 
 	<dependencyManagement>
@@ -293,6 +295,22 @@
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>19.0</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.graalvm.js</groupId>
+				<artifactId>js</artifactId>
+				<version>${graalvm.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.graalvm.js</groupId>
+				<artifactId>js-scriptengine</artifactId>
+				<version>${graalvm.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.graalvm.truffle</groupId>
+				<artifactId>truffle-api</artifactId>
+				<version>${graalvm.version}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
