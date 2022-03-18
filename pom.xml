@@ -5,7 +5,7 @@
 
 	<groupId>com.jd.blockchain</groupId>
 	<artifactId>jdchain-project</artifactId>
-	<version>1.1.7.RELEASE</version>
+	<version>1.1.8.RELEASE</version>
 	<packaging>pom</packaging>
 	<description>jdchain</description>
 	<name>jdchain-project</name>

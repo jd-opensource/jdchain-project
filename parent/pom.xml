@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>com.jd.blockchain</groupId>
 		<artifactId>jdchain-dependencies</artifactId>
-		<version>1.1.7.RELEASE</version>
+		<version>1.1.8.RELEASE</version>
 		<relativePath>../dependencies</relativePath>
 	</parent>
 
