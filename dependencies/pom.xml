@@ -24,7 +24,7 @@
         <mongo.driver.version>3.3.0</mongo.driver.version>
         <shiro.version>1.2.2</shiro.version>
         <aspectj.version>1.8.8</aspectj.version>
-        <fastjson.version>1.2.70</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <procyon.version>0.5.35</procyon.version>
         <druid.version>1.0.18</druid.version>
         <commons.fileupload.version>1.2.2</commons.fileupload.version>
