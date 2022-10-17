@@ -33,8 +33,8 @@
         <mysql.connector.version>5.1.37</mysql.connector.version>
         <servlet.version>3.1.0</servlet.version>
         <jstl.version>1.2</jstl.version>
-        <log4j.version>2.17.1</log4j.version>
-        <slf4j.version>1.7.32</slf4j.version>
+        <log4j.version>2.19.0</log4j.version>
+        <slf4j.version>1.7.36</slf4j.version>
         <junit.version>4.12</junit.version>
         <mockito.version>3.9.0</mockito.version>
         <httpclient.version>4.5.1</httpclient.version>
@@ -52,6 +52,9 @@
         <disruptor.version>3.4.2</disruptor.version>
         <graalvm.version>22.0.0.2</graalvm.version>
         <netty.version>4.1.66.Final</netty.version>
+        <rabbitmq.version>5.13.1</rabbitmq.version>
+        <activemq.version>5.16.5</activemq.version>
+        <commons.pool2.version>2.11.1</commons.pool2.version>
     </properties>
 
     <dependencyManagement>
@@ -94,9 +97,21 @@
             </dependency>
 
             <dependency>
-                <groupId>com.lmax</groupId>
-                <artifactId>disruptor</artifactId>
-                <version>${disruptor.version}</version>
+                <groupId>com.rabbitmq</groupId>
+                <artifactId>amqp-client</artifactId>
+                <version>${rabbitmq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.activemq</groupId>
+                <artifactId>activemq-client</artifactId>
+                <version>${activemq.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-pool2</artifactId>
+                <version>${commons.pool2.version}</version>
             </dependency>
 
             <dependency>
